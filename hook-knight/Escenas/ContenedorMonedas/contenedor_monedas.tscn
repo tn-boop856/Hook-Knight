@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cnleqkcuhg0ag"]
+
+[ext_resource type="Script" uid="uid://cxnlivxe3orfi" path="res://Escenas/ContenedorMonedas/contenedor_monedas.gd" id="1_q5mvo"]
+[ext_resource type="PackedScene" uid="uid://dqyu6e0okq8ax" path="res://Escenas/Pantalla_Victoria/pantalla_victoria.tscn" id="2_0fxug"]
+
+[node name="ContenedorMonedas" type="Node" unique_id=686509535]
+script = ExtResource("1_q5mvo")
+pantalla_victoria = ExtResource("2_0fxug")

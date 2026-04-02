@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://44tnryk33mlm"]
+
+[ext_resource type="Texture2D" uid="uid://dpooirsiy7xyk" path="res://SpriteSheets/Idle.png" id="1_eu8fj"]
+[ext_resource type="Script" uid="uid://7ysxs0a3vpn4" path="res://Scripts/player.gd" id="1_u4u6t"]
+[ext_resource type="Script" uid="uid://dn3etpucexlno" path="res://Scripts/grapple_controller.gd" id="3_rs2dv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u4u6t"]
+
+[node name="Player" type="CharacterBody2D" unique_id=1874519932]
+collision_layer = 2
+script = ExtResource("1_u4u6t")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1867394251]
+texture = ExtResource("1_eu8fj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=568004436]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_u4u6t")
+
+[node name="GrappleController" type="Node2D" parent="." unique_id=18531239]
+script = ExtResource("3_rs2dv")
+
+[node name="RayCast2D" type="RayCast2D" parent="GrappleController" unique_id=1750833370]
+target_position = Vector2(200, 0)
+
+[node name="Line2D" type="Line2D" parent="GrappleController" unique_id=100474963]
+points = PackedVector2Array(0, 0, 0, 0)
+width = 2.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1876374659]
+position = Vector2(-1.490117e-08, -39.999996)
+rotation = -0.007983328
+zoom = Vector2(2, 2)
+limit_left = -10000547
+limit_top = -9996492
+limit_right = 9999453
+limit_bottom = 900

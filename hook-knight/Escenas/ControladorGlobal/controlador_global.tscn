@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ccbnpd33rt4wf"]
+
+[ext_resource type="Script" uid="uid://bisbm0m0ykful" path="res://Escenas/ControladorGlobal/controlador_global.gd" id="1_cmk1l"]
+
+[node name="ControladorGlobal" type="Node" unique_id=1718847282]
+script = ExtResource("1_cmk1l")

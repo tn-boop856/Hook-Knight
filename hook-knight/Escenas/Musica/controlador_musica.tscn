@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bcgtgusgvpvwb"]
+
+[ext_resource type="AudioStream" uid="uid://dp71arlraevi6" path="res://Musica/Ludum Dare 28 01.ogg" id="1_cpak2"]
+
+[node name="ControladorMusica" type="Node" unique_id=332939472]
+
+[node name="Musica" type="AudioStreamPlayer" parent="." unique_id=1067628266]
+stream = ExtResource("1_cpak2")
+autoplay = true
+bus = &"Musica"

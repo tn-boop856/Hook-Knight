@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://dnbo0358o6u8s"]
+
+[ext_resource type="Theme" uid="uid://dv4k5rxs1eksg" path="res://Temas/menu_principal.tres" id="1_7ygoh"]
+[ext_resource type="FontFile" uid="uid://ddknqyioa76ek" path="res://SpriteSheets/Fuentes/Kenney Mini Square Mono.ttf" id="2_sirit"]
+[ext_resource type="StyleBox" uid="uid://c301vysh2aplx" path="res://EstiloBotones/normal.tres" id="2_vheb7"]
+[ext_resource type="StyleBox" uid="uid://3w0kfvq8r5in" path="res://EstiloBotones/pressed.tres" id="3_1o6wf"]
+[ext_resource type="StyleBox" uid="uid://cwaosvqhqsk3m" path="res://EstiloBotones/hover.tres" id="4_vheb7"]
+[ext_resource type="Script" uid="uid://bfb1qq2un27si" path="res://Escenas/Menu/boton_salir.gd" id="5_1o6wf"]
+[ext_resource type="Script" uid="uid://dmigoxqcr8omt" path="res://Escenas/Menu/boton_jugar.gd" id="5_qtjk2"]
+[ext_resource type="PackedScene" uid="uid://btwemdj2usl7e" path="res://Escenas/Nivel/nivel.tscn" id="6_pcd8b"]
+
+[node name="MenuPrincipal" type="Control" unique_id=1189648581]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1686200316]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Jugar" type="Button" parent="VBoxContainer" unique_id=1609787228]
+layout_mode = 2
+theme = ExtResource("1_7ygoh")
+theme_override_fonts/font = ExtResource("2_sirit")
+theme_override_styles/normal = ExtResource("2_vheb7")
+theme_override_styles/pressed = ExtResource("3_1o6wf")
+theme_override_styles/hover = ExtResource("4_vheb7")
+text = " Jugar "
+script = ExtResource("5_qtjk2")
+nivel = ExtResource("6_pcd8b")
+
+[node name="Salir" type="Button" parent="VBoxContainer" unique_id=752132105]
+layout_mode = 2
+theme = ExtResource("1_7ygoh")
+theme_override_fonts/font = ExtResource("2_sirit")
+theme_override_styles/normal = ExtResource("2_vheb7")
+theme_override_styles/pressed = ExtResource("4_vheb7")
+theme_override_styles/hover = ExtResource("4_vheb7")
+text = "Salir"
+script = ExtResource("5_1o6wf")
